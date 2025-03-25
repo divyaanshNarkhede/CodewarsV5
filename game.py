@@ -17,7 +17,7 @@ class Game:
 
         self.arena_display_size = (ARENA_WIDTH,ARENA_HEIGHT)
         self.side_display_size = ((FULL_WIDTH-MIDDLE_WIDTH)//2, FULL_HEIGHT)
-        self.tile_size = ARENA_WIDTH//12
+        self.tile_size = ARENA_WIDTH/12
         self.middle_screen = pygame.Surface((MIDDLE_WIDTH,MIDDLE_HEIGHT))
         self.screen = pygame.Surface((MIDDLE_WIDTH,MIDDLE_HEIGHT),pygame.SRCALPHA)
         self.shadow_screen = pygame.Surface((MIDDLE_WIDTH,MIDDLE_HEIGHT),pygame.SRCALPHA)
@@ -42,9 +42,9 @@ class Game:
         """
         self.team_name1 = team_name1
         self.team_name2 = team_name2
-        deployable_troops1 = troops1
+        deployable_troops1 = troops1.copy()
         random.shuffle(deployable_troops1)
-        deployable_troops2 = troops2
+        deployable_troops2 = troops2.copy()
         random.shuffle(deployable_troops2)
         self.team1_script_test = True
         self.team2_script_test = True
